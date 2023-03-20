@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:hint="nom"
+        android:id="@+id/textview_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textview_prenom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:hint="prenom"
+        android:id="@+id/textview_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textview_birthdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_nom" />
+
+    <DatePicker
+        android:hint="date de n"
+        android:id="@+id/textview_birthdate"
+        android:datePickerMode="spinner"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:calendarViewShown="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_prenom" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_birthdate" />
+    <Button
+        android:id="@+id/button_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view"
+        app:layout_constraintTop_toBottomOf="@id/button_submit"
+        app:layout_constraintStart_toStartOf="@id/button_submit"
+        app:layout_constraintEnd_toEndOf="@id/button_submit"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
